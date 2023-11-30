@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obris Django - Example Template View</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            height: 100vh;
+
+            background: #FCFCFD;
+        }
+
+        .page-container {
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 4rem;
+            row-gap: 2.5rem;
+
+            max-width: 1024px;
+
+            padding: 128px 8px 0 8px;
+        }
+
+        .content-title {
+            color: #042035;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .text-content {
+            margin: 4px 0 0 0;
+
+            color: #6B7280;
+
+            line-height: 24px;
+        }
+
+        .main-content {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        .image-container {
+            flex: 1;
+
+            display: flex;
+            /*align-items: center;*/
+            justify-content: center;
+
+            overflow: hidden;
+
+            border-radius: 0.5rem;
+        }
+
+        .obris-image {
+            object-position: center;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .page-container {
+                max-width: 80rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .content-container {
+                display: grid;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                row-gap: 32px;
+
+                max-width: 42rem;
+                padding: 96px 4px 0 4px;
+
+                margin: 0 auto 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-container">
+            <div class="image-container">
+                <img class="obris-image"
+                     src="https://obris-public-v1.s3.us-east-1.amazonaws.com/branding/images/obris-square-dark.png"
+                     width="576"
+                     height="384"
+                />
+            </div>
+            <div class="main-content">
+                <div class="content-title">
+                    Welcome to Obris!
+                </div>
+                <div class="text-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem nibh, venenatis id lacus id,
+                    vehicula tincidunt quam. Nunc dui dolor, congue non mauris a, faucibus lacinia ex. Vestibulum tempus accumsan malesuada.
+                    Mauris eget enim massa. Proin cursus euismod quam et imperdiet. Sed nec orci quis metus ornare bibendum mattis feugiat quam.
+                    Aliquam erat volutpat. Proin iaculis aliquam laoreet. Nulla at ultrices justo. Cras porta tincidunt hendrerit.
+                    Sed blandit, elit sit amet pellentesque placerat, urna nibh dignissim diam, in vehicula odio sapien ac risus.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
